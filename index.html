@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Adithya Manpower Services | Built on Trust. Driven by Quality.</title>
-<meta name="description" content="Corporate manpower solutions delivering skilled, unskilled and professional workforce across Bangalore since 2010.">
+<meta name="description" content="Premium corporate manpower solutions delivering reliable workforce across industries in Bangalore.">
 
 <style>
 :root{
   --primary:#f15a29;
-  --secondary:#111827;
-  --muted:#6b7280;
-  --light:#f9fafb;
+  --primary-soft:#fff0e8;
+  --dark:#0f172a;
+  --muted:#64748b;
+  --bg:#f8fafc;
   --card:#ffffff;
 }
 
@@ -20,19 +21,20 @@
 
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;
-  color:var(--secondary);
-  background:var(--light);
-  line-height:1.6;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.65;
 }
 
 /* HEADER */
 header{
-  background:white;
   position:sticky;
   top:0;
-  z-index:1000;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(8px);
   border-bottom:1px solid #e5e7eb;
+  z-index:1000;
 }
 
 .container{
@@ -47,14 +49,12 @@ nav{
   align-items:center;
 }
 
-.logo img{
-  height:46px;
-}
+.logo img{height:46px;}
 
 nav a{
   margin-left:1.5rem;
   text-decoration:none;
-  color:var(--secondary);
+  color:var(--dark);
   font-weight:500;
 }
 
@@ -62,11 +62,24 @@ nav a:hover{color:var(--primary);}
 
 /* HERO */
 .hero{
+  position:relative;
   background:
-    radial-gradient(circle at top right,#fde6dc,transparent 50%),
-    radial-gradient(circle at bottom left,#ffe7d6,transparent 50%),
-    white;
-  padding:6rem 0;
+    radial-gradient(circle at 20% 20%, #ffe5d6, transparent 45%),
+    radial-gradient(circle at 80% 30%, #fff3eb, transparent 40%),
+    linear-gradient(to bottom, #ffffff, #f9fafb);
+  padding:6.5rem 0;
+  overflow:hidden;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  bottom:-120px;
+  right:-120px;
+  width:320px;
+  height:320px;
+  background:rgba(241,90,41,0.08);
+  border-radius:50%;
 }
 
 .hero-grid{
@@ -78,9 +91,9 @@ nav a:hover{color:var(--primary);}
 
 .badge{
   display:inline-block;
-  background:#fff0e8;
+  background:var(--primary-soft);
   color:var(--primary);
-  padding:0.4rem 0.9rem;
+  padding:0.45rem 1rem;
   border-radius:999px;
   font-size:0.85rem;
   font-weight:600;
@@ -88,13 +101,13 @@ nav a:hover{color:var(--primary);}
 }
 
 .hero h1{
-  font-size:3rem;
+  font-size:3.1rem;
   line-height:1.15;
   margin-bottom:1rem;
 }
 
 .hero p{
-  max-width:540px;
+  max-width:560px;
   color:var(--muted);
   font-size:1.05rem;
 }
@@ -104,18 +117,21 @@ nav a:hover{color:var(--primary);}
   margin-top:2rem;
   background:var(--primary);
   color:white;
-  padding:0.9rem 1.9rem;
-  border-radius:10px;
+  padding:1rem 2rem;
+  border-radius:12px;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 10px 25px rgba(241,90,41,0.25);
+  box-shadow:0 15px 35px rgba(241,90,41,0.3);
+  transition:transform 0.2s ease;
 }
 
+.cta:hover{transform:translateY(-2px);}
+
 /* SECTIONS */
-section{padding:5rem 0;}
+section{padding:5.5rem 0;}
 
 h2{
-  font-size:2.2rem;
+  font-size:2.3rem;
   margin-bottom:0.8rem;
 }
 
@@ -134,39 +150,53 @@ h2{
 
 .card{
   background:var(--card);
-  padding:2.3rem;
-  border-radius:18px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.06);
+  padding:2.5rem;
+  border-radius:20px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.06);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card h3{
-  margin-top:0;
-  margin-bottom:0.6rem;
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 35px 70px rgba(0,0,0,0.08);
+}
+
+.icon{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:var(--primary-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--primary);
+  font-weight:700;
+  margin-bottom:1rem;
 }
 
 /* CLIENTS */
 .clients{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:1.2rem;
+  gap:1.3rem;
   margin-top:3rem;
 }
 
 .clients div{
   background:white;
-  padding:1.2rem;
-  border-radius:14px;
+  padding:1.4rem;
+  border-radius:16px;
   text-align:center;
   font-weight:500;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  box-shadow:0 15px 30px rgba(0,0,0,0.05);
 }
 
 /* CONTACT */
 .contact{
   background:white;
+  padding:3.5rem;
   border-radius:24px;
-  padding:3rem;
-  box-shadow:0 25px 50px rgba(0,0,0,0.06);
+  box-shadow:0 30px 60px rgba(0,0,0,0.06);
 }
 
 /* FOOTER */
@@ -189,11 +219,65 @@ footer{
   font-size:22px;
   text-decoration:none;
   box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  z-index:1500;
+}
+
+/* POPUPS */
+.popup-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+
+.popup{
+  background:white;
+  padding:2.5rem;
+  border-radius:20px;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+  animation:fadeUp 0.4s ease;
+}
+
+.popup p{color:var(--muted);}
+
+.popup button{
+  margin-top:1.5rem;
+  background:var(--primary);
+  color:white;
+  border:none;
+  padding:0.6rem 1.4rem;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.contact-popup{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  background:white;
+  padding:1rem 1.2rem;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+  font-size:0.9rem;
+  display:none;
+  animation:fadeUp 0.4s ease;
+  z-index:1500;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr;}
-  .hero h1{font-size:2.2rem;}
+  .hero h1{font-size:2.3rem;}
 }
 </style>
 </head>
@@ -203,9 +287,7 @@ footer{
 <header>
 <div class="container">
 <nav>
-<div class="logo">
-<img src="logo.png" alt="Adithya Manpower Services">
-</div>
+<div class="logo"><img src="logo.png" alt="Adithya Manpower Services"></div>
 <div>
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -222,7 +304,7 @@ footer{
 <div class="badge">Built on Trust · Driven by Quality</div>
 <h1>Reliable Corporate<br>Manpower Solutions</h1>
 <p>
-Adithya Manpower Services partners with industries and corporates to deliver compliant, dependable and performance-driven workforce solutions across Bangalore.
+Adithya Manpower Services partners with leading organizations to deliver compliant, dependable and performance-driven workforce solutions.
 </p>
 <a class="cta" href="https://wa.me/919945311633">Get in Touch</a>
 </div>
@@ -244,22 +326,10 @@ Established in 2010, Adithya Manpower Services provides skilled, unskilled, mult
 <p class="subtext">End-to-end workforce solutions tailored to your business needs.</p>
 
 <div class="grid">
-<div class="card">
-<h3>Manpower Supply</h3>
-<p>Skilled, unskilled & professional workforce across industries.</p>
-</div>
-<div class="card">
-<h3>Outsourcing Solutions</h3>
-<p>Complete workforce outsourcing with statutory compliance.</p>
-</div>
-<div class="card">
-<h3>Compliance Management</h3>
-<p>EPF, ESIC, payroll & labour law compliance.</p>
-</div>
-<div class="card">
-<h3>Industry Staffing</h3>
-<p>Manufacturing, facilities, healthcare, hospitality & IT.</p>
-</div>
+<div class="card"><div class="icon">MS</div><h3>Manpower Supply</h3><p>Skilled, unskilled & professional workforce.</p></div>
+<div class="card"><div class="icon">OS</div><h3>Outsourcing</h3><p>Complete workforce outsourcing solutions.</p></div>
+<div class="card"><div class="icon">CM</div><h3>Compliance</h3><p>EPF, ESIC & labour law compliance.</p></div>
+<div class="card"><div class="icon">IS</div><h3>Industry Staffing</h3><p>Manufacturing, facilities, healthcare & IT.</p></div>
 </div>
 </div>
 </section>
@@ -267,7 +337,6 @@ Established in 2010, Adithya Manpower Services provides skilled, unskilled, mult
 <section id="clients">
 <div class="container">
 <h2>Trusted by Leading Companies</h2>
-
 <div class="clients">
 <div>Bill Forge Ltd</div>
 <div>Vector NDT Pvt Ltd</div>
@@ -293,17 +362,43 @@ Established in 2010, Adithya Manpower Services provides skilled, unskilled, mult
 </div>
 </section>
 
+<!-- POPUPS -->
+<div class="popup-overlay" id="welcomePopup">
+  <div class="popup">
+    <h3>Welcome to AMS</h3>
+    <p><strong>Built on Trust. Driven by Quality.</strong><br>Corporate manpower solutions you can rely on.</p>
+    <button onclick="closePopup()">Continue</button>
+  </div>
+</div>
+
+<div class="contact-popup" id="contactPopup">
+  Need manpower support?<br>
+  <a href="https://wa.me/919945311633" style="color:#f15a29;font-weight:600;text-decoration:none;">Chat on WhatsApp →</a>
+</div>
+
 <a class="whatsapp" href="https://wa.me/919945311633">💬</a>
 
 <footer>
 © 2010–2025 Adithya Manpower Services · Bangalore
 </footer>
 
+<script>
+function closePopup(){
+  document.getElementById('welcomePopup').style.display='none';
+  localStorage.setItem('amsVisited','yes');
+}
+
+window.addEventListener('load',()=>{
+  if(!localStorage.getItem('amsVisited')){
+    setTimeout(()=>{
+      document.getElementById('welcomePopup').style.display='flex';
+    },2000);
+  }
+  setTimeout(()=>{
+    document.getElementById('contactPopup').style.display='block';
+  },5000);
+});
+</script>
+
 </body>
 </html>
-
-     
-    
-
-    
-    
