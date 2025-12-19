@@ -1,243 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
-  <title>Adithya Manpower Services | Corporate Manpower Solutions Bangalore</title>
-  <meta name="description" content="Adithya Manpower Services (AMS) is a trusted manpower consultancy in Bangalore providing skilled, unskilled and professional staffing solutions since 2010." />
-  <meta name="keywords" content="manpower services Bangalore, staffing solutions, contract labour, AMS manpower, workforce solutions" />
+<title>Adithya Manpower Services | Built on Trust. Driven by Quality.</title>
+<meta name="description" content="Corporate manpower solutions delivering skilled, unskilled and professional workforce across Bangalore since 2010.">
 
-  <style>
-    :root {
-      --primary: #e4572e;
-      --secondary: #2b2b2b;
-      --muted: #6b7280;
-      --light: #f7f7f7;
-      --white: #ffffff;
-    }
+<style>
+:root{
+  --primary:#f15a29;
+  --secondary:#111827;
+  --muted:#6b7280;
+  --light:#f9fafb;
+  --card:#ffffff;
+}
 
-    * { box-sizing: border-box; }
+*{box-sizing:border-box;}
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color: var(--secondary);
-      background: var(--white);
-      line-height: 1.65;
-    }
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;
+  color:var(--secondary);
+  background:var(--light);
+  line-height:1.6;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 1000;
-    }
+/* HEADER */
+header{
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid #e5e7eb;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1.25rem 1.5rem;
-    }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:1.25rem 1.5rem;
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .logo img {
-      height: 46px;
-    }
+.logo img{
+  height:46px;
+}
 
-    nav a {
-      margin-left: 1.2rem;
-      text-decoration: none;
-      color: var(--secondary);
-      font-weight: 500;
-    }
+nav a{
+  margin-left:1.5rem;
+  text-decoration:none;
+  color:var(--secondary);
+  font-weight:500;
+}
 
-    nav a:hover { color: var(--primary); }
+nav a:hover{color:var(--primary);}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(120deg, #ffffff 60%, #fff1eb 100%);
-      padding: 5rem 0 4rem;
-    }
+/* HERO */
+.hero{
+  background:
+    radial-gradient(circle at top right,#fde6dc,transparent 50%),
+    radial-gradient(circle at bottom left,#ffe7d6,transparent 50%),
+    white;
+  padding:6rem 0;
+}
 
-    .hero h1 {
-      font-size: 2.6rem;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:3rem;
+  align-items:center;
+}
 
-    .hero p {
-      color: var(--muted);
-      max-width: 550px;
-    }
+.badge{
+  display:inline-block;
+  background:#fff0e8;
+  color:var(--primary);
+  padding:0.4rem 0.9rem;
+  border-radius:999px;
+  font-size:0.85rem;
+  font-weight:600;
+  margin-bottom:1rem;
+}
 
-    .cta {
-      margin-top: 2rem;
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+.hero h1{
+  font-size:3rem;
+  line-height:1.15;
+  margin-bottom:1rem;
+}
 
-    section { padding: 4rem 0; }
+.hero p{
+  max-width:540px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
 
-    h2 {
-      font-size: 1.9rem;
-      margin-bottom: 1rem;
-    }
+.cta{
+  display:inline-block;
+  margin-top:2rem;
+  background:var(--primary);
+  color:white;
+  padding:0.9rem 1.9rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(241,90,41,0.25);
+}
 
-    .subtext {
-      color: var(--muted);
-      max-width: 720px;
-    }
+/* SECTIONS */
+section{padding:5rem 0;}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
+h2{
+  font-size:2.2rem;
+  margin-bottom:0.8rem;
+}
 
-    .card {
-      background: var(--white);
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 2rem;
-    }
+.subtext{
+  color:var(--muted);
+  max-width:720px;
+}
 
-    .clients {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
+/* SERVICES */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
+  margin-top:3rem;
+}
 
-    .clients div {
-      background: var(--light);
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: 500;
-    }
+.card{
+  background:var(--card);
+  padding:2.3rem;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.06);
+}
 
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-    }
+.card h3{
+  margin-top:0;
+  margin-bottom:0.6rem;
+}
 
-    /* WhatsApp */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 14px 16px;
-      border-radius: 50%;
-      font-size: 22px;
-      text-decoration: none;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
+/* CLIENTS */
+.clients{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.2rem;
+  margin-top:3rem;
+}
 
-    @media (max-width: 900px) {
-      .hero h1 { font-size: 2.1rem; }
-    }
-  </style>
+.clients div{
+  background:white;
+  padding:1.2rem;
+  border-radius:14px;
+  text-align:center;
+  font-weight:500;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* CONTACT */
+.contact{
+  background:white;
+  border-radius:24px;
+  padding:3rem;
+  box-shadow:0 25px 50px rgba(0,0,0,0.06);
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  color:#cbd5e1;
+  text-align:center;
+  padding:3rem 1.5rem;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 16px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:2.2rem;}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="container">
-    <nav>
-      <div class="logo">
-        <img src="logo.png" alt="Adithya Manpower Services Logo" />
-      </div>
-      <div>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
+<div class="container">
+<nav>
+<div class="logo">
+<img src="logo.png" alt="Adithya Manpower Services">
+</div>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#clients">Clients</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
 </header>
 
 <section class="hero">
-  <div class="container">
-    <h1>Corporate Manpower Solutions<br>Built on Trust & Experience</h1>
-    <p>Adithya Manpower Services provides reliable manpower solutions to industrial, commercial and corporate clients across Bangalore since 2010.</p>
-    <a class="cta" href="https://wa.me/919945311633">Contact on WhatsApp</a>
-  </div>
+<div class="container hero-grid">
+<div>
+<div class="badge">Built on Trust · Driven by Quality</div>
+<h1>Reliable Corporate<br>Manpower Solutions</h1>
+<p>
+Adithya Manpower Services partners with industries and corporates to deliver compliant, dependable and performance-driven workforce solutions across Bangalore.
+</p>
+<a class="cta" href="https://wa.me/919945311633">Get in Touch</a>
+</div>
+</div>
 </section>
 
 <section id="about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p class="subtext">
-      Adithya Manpower Services (AMS) views manpower as a long-term partnership. We deliver skilled, unskilled, multi-skilled and professional workforce solutions with complete statutory compliance.
-    </p>
-  </div>
+<div class="container">
+<h2>About AMS</h2>
+<p class="subtext">
+Established in 2010, Adithya Manpower Services provides skilled, unskilled, multi-skilled and professional manpower with strong focus on compliance, reliability and long-term partnerships.
+</p>
+</div>
 </section>
 
-<section id="services" style="background:#fafafa">
-  <div class="container">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card"><strong>Manpower Supply</strong><br>Unskilled, skilled, multi-skilled & professional manpower.</div>
-      <div class="card"><strong>Outsourcing</strong><br>End-to-end workforce outsourcing.</div>
-      <div class="card"><strong>Statutory Compliance</strong><br>EPF, ESIC, Contract Labour Act.</div>
-      <div class="card"><strong>Industry Staffing</strong><br>Manufacturing, Facilities, Healthcare, IT.</div>
-    </div>
-  </div>
+<section id="services">
+<div class="container">
+<h2>Our Services</h2>
+<p class="subtext">End-to-end workforce solutions tailored to your business needs.</p>
+
+<div class="grid">
+<div class="card">
+<h3>Manpower Supply</h3>
+<p>Skilled, unskilled & professional workforce across industries.</p>
+</div>
+<div class="card">
+<h3>Outsourcing Solutions</h3>
+<p>Complete workforce outsourcing with statutory compliance.</p>
+</div>
+<div class="card">
+<h3>Compliance Management</h3>
+<p>EPF, ESIC, payroll & labour law compliance.</p>
+</div>
+<div class="card">
+<h3>Industry Staffing</h3>
+<p>Manufacturing, facilities, healthcare, hospitality & IT.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section id="clients">
-  <div class="container">
-    <h2>Our Clients</h2>
-    <div class="clients">
-      <div>Bill Forge Ltd</div>
-      <div>Vector NDT Pvt Ltd</div>
-      <div>Flowell Pumps & Meters</div>
-      <div>Michell Bearings Pvt Ltd</div>
-      <div>United Packaging Concepts</div>
-      <div>Ametronics Pvt Ltd</div>
-      <div>Shindengen</div>
-      <div>Silkee Electronics</div>
-    </div>
-  </div>
+<div class="container">
+<h2>Trusted by Leading Companies</h2>
+
+<div class="clients">
+<div>Bill Forge Ltd</div>
+<div>Vector NDT Pvt Ltd</div>
+<div>Flowell Pumps & Meters</div>
+<div>Michell Bearings Pvt Ltd</div>
+<div>United Packaging Concepts</div>
+<div>Ametronics Pvt Ltd</div>
+<div>Shindengen</div>
+<div>Silkee Electronics</div>
+</div>
+</div>
 </section>
 
-<section id="contact" style="background:#fafafa">
-  <div class="container grid">
-    <div>
-      <h2>Contact Us</h2>
-      <p><strong>Mr. K. Murthy</strong><br>Proprietor – Operations</p>
-      <p>📞 +91 99453 11633</p>
-      <p>✉️ adithyamanpowerservice@gmail.com</p>
-      <p>No.10, SR Complex, Anekal Main Road,<br>Bangalore – 560105</p>
-    </div>
-    <div>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://maps.google.com/?q=SR+Complex+Anekal+Main+Road+Bangalore" alt="Office location QR code" />
-    </div>
-  </div>
+<section id="contact">
+<div class="container">
+<div class="contact">
+<h2>Contact Us</h2>
+<p><strong>Mr. K. Murthy</strong><br>Proprietor – Operations</p>
+<p>📞 +91 99453 11633</p>
+<p>✉️ adithyamanpowerservice@gmail.com</p>
+<p>No.10, SR Complex, Anekal Main Road,<br>Bangalore – 560105</p>
+</div>
+</div>
 </section>
 
 <a class="whatsapp" href="https://wa.me/919945311633">💬</a>
 
 <footer>
-  © 2010–2025 Adithya Manpower Services · Bangalore
+© 2010–2025 Adithya Manpower Services · Bangalore
 </footer>
 
 </body>
 </html>
+
+     
+    
+
+    
+    
